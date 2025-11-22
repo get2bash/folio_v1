@@ -1,0 +1,24 @@
+:root {
+  font-family: "Instrument Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* primary app background color (used by preloader) */
+  --primary-bg: #FFFDEC;
+  background-color: var(--primary-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

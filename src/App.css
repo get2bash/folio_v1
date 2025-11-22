@@ -1,0 +1,220 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-bg, #FFFDEC);
+  z-index: 9999;
+  transition: opacity 420ms ease, visibility 420ms ease;
+}
+.preloader-overlay.fade-out { opacity: 0; visibility: hidden; }
+.preloader-inner { text-align: center; }
+.progress-text { font-weight: 700; color: #0f172a; }
+.progress-center { font-size: 2.5rem; font-weight: 800; }
+
+.app-content { opacity: 0; transform: translateY(6px); transition: opacity 520ms cubic-bezier(0.16, 1, 0.3, 1), transform 520ms cubic-bezier(0.16, 1, 0.3, 1); }
+.app-content.ease-in { opacity: 1; transform: translateY(0); }
+.app-content.hidden-behind { pointer-events: none; }
+
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.5rem;
+  min-height: calc(100vh - 84px);
+  padding: 1.25rem 1rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.hero p {
+  max-width: 65ch;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  color: #0f172a;
+}
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 1rem;
+  margin-top: -8rem;
+  position: relative;
+  z-index: 2;
+}
+.showcase-inner {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.video-wrap {
+  width: 100%;
+  background: #000;
+  border-radius: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.12);
+}
+.showcase-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: #000;
+}
+
+/* =========================================
+   6. Featured Projects Section
+   ========================================= */
+.featured-projects {
+  padding: 2rem 1rem;
+  text-align: left;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.featured-projects h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.all-projects-btn {
+  display: inline-block;
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.all-projects-btn:hover {
+  color: #4338ca;
+  border-color: #4338ca;
+}
+
+/* =========================================
+   7. Projects Page
+   ========================================= */
+.projects-page {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.projects-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.projects-header p {
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.projects-grid-full {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid-full {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .projects-grid-full {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================================
+   8. Footer
+   ========================================= */
+/* Footer styles moved to src/components/Footer.css */
+
+/* =========================================
+   9. Responsive Adjustments (Global)
+   ========================================= */
+
+@media (max-width: 640px) {
+  .showcase-inner { max-width: 100%; }
+  .showcase h2 { font-size: 1.1rem; }
+  .hero { margin-top: -0.6rem; padding: 1rem 0.75rem 0.5rem; }
+  .showcase { margin-top: -2.5rem; padding: 1.25rem 0 0.75rem; }
+  .video-wrap { box-shadow: 0 8px 20px rgba(2,6,23,0.10); }
+}
+
+/* Tablet and small desktop adjustments */
+@media (max-width: 1024px) {
+  #root { padding: 1.5rem; }
+  .hero p { font-size: 1.35rem; max-width: 60ch; }
+  .showcase { margin-top: -5rem; padding: 1.5rem 0 0.75rem; }
+  .video-wrap { box-shadow: 0 10px 24px rgba(2,6,23,0.11); }
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet (narrow) / large phones */
+@media (max-width: 768px) {
+  .hero { min-height: calc(100vh - 120px); padding: 1rem 1rem 1.5rem; }
+  .hero p { font-size: 1.15rem; }
+  .showcase { margin-top: -3rem; padding: 1rem 0 0.75rem; }
+  /* make content take ~95% of the viewport on narrower screens */
+  .container { width: 98%; max-width: 980px; padding: 0; }
+}
+
+/* Small phones: tighten spacing and font sizes */
+@media (max-width: 480px) {
+  #root { padding: 0.5rem 0; }
+  .hero { margin-top: -0.4rem; min-height: calc(100vh - 140px); padding: 0.75rem 0.75rem 0.5rem; }
+  .hero p { font-size: 1.05rem; line-height: 1.6; padding: 0 0.25rem; }
+  .showcase { margin-top: -2rem; padding: 0.75rem 0 0.5rem; }
+  .video-wrap { aspect-ratio: 16 / 9; box-shadow: 0 6px 18px rgba(2,6,23,0.09); }
+  
+  /* Container takes 95% of screen width */
+  .container { width: 95%; max-width: 100%; padding: 0; margin: 0 auto; }
+  
+  /* Remove side padding from featured projects on mobile so cards take full container width */
+  .featured-projects { padding: 2rem 0; }
+}
+
+/* High-density / large screens: slightly larger typography */
+@media (min-width: 1280px) {
+  .hero p { font-size: 1.6rem; }
+  .showcase-inner { max-width: 90%; }
+}
