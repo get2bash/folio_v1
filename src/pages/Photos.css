@@ -1,0 +1,47 @@
+.photos-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 20px 60px; /* Top padding to account for fixed header */
+  box-sizing: border-box;
+}
+
+.photos-grid {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.photo-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .photos-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .photos-grid {
+    column-count: 1;
+  }
+  
+  .photos-page {
+    padding-top: 100px;
+  }
+}

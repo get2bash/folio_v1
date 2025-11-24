@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Lab from './pages/Lab'
+import Photos from './pages/Photos'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -100,6 +101,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/lab" element={<Lab />} />
+            <Route path="/photos" element={<Photos />} />
           </Routes>
           <Footer />
         </div>

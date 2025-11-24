@@ -14,6 +14,7 @@ export default function Header() {
       <nav className="site-nav" aria-label="Main navigation">
         <Link to="/projects">Projects</Link>
         <Link to="/lab">Lab</Link>
+        <Link to="/photos">Photos</Link>
       </nav>
     </header>
   )
