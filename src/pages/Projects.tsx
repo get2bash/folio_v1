@@ -9,7 +9,7 @@ export default function Projects() {
         <ProjectCard 
           title="DataLead Africa" 
           description="Research and consulting firm providing world-class data analytics and strategic consulting services." 
-          image="/screen_1.jpg"
+          image="/datalead-africa/screen_1.svg"
         />
 
         <ProjectCard 

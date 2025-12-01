@@ -7,7 +7,10 @@ import './Header.css'
 export default function Header() {
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
-    return savedMode === 'true';
+    if (savedMode !== null) {
+      return savedMode === 'true';
+    }
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 
   useEffect(() => {
@@ -33,7 +36,6 @@ export default function Header() {
       <nav className="site-nav" aria-label="Main navigation">
         <Link to="/projects">Projects</Link>
         <Link to="/lab">Lab</Link>
-        <Link to="/photos">Photos</Link>
         <button 
           onClick={toggleDarkMode} 
           className="theme-toggle"

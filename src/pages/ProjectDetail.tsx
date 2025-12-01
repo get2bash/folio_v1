@@ -39,6 +39,14 @@ export default function ProjectDetail() {
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+
+          {id === 'datalead-africa' && (
+            <div className="project-gallery">
+              <img src="/datalead-africa/screen_2.svg" alt="DataLead Africa Screen 2" />
+              <img src="/datalead-africa/screen_3.svg" alt="DataLead Africa Screen 3" />
+              <img src="/datalead-africa/screen_4.svg" alt="DataLead Africa Screen 4" />
+            </div>
+          )}
         </div>
       </div>
     </div>

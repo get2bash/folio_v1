@@ -34,7 +34,7 @@
 
 .project-card:hover .card-media img,
 .project-card:hover .card-media video {
-  filter: blur(5px);
+  filter: blur(1px);
 }
 
 .card-overlay {
