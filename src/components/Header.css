@@ -13,6 +13,13 @@
   padding-left: 0.6rem;
 }
 
+.brand a {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
 .logo {
   height: 1.4rem;
   width: auto;
@@ -33,12 +40,32 @@
 }
 
 .site-nav a {
-  color: #0f172a;
+  color: var(--text-color);
   text-decoration: none;
   padding: 0.45rem 0.6rem;
   border-radius: 6px;
   font-size: 1.4rem;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.45rem;
+  border-radius: 6px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--social-bg);
+  color: var(--nav-hover);
 }
 
 /* Responsive adjustments */

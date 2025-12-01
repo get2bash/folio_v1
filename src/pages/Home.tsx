@@ -31,9 +31,9 @@ Occasionally I like to learn and write about cloud computing and AWS services as
         <h3>Featured projects</h3>
         <div className="projects-grid">
           <ProjectCard 
-            title="Project One" 
-            description="A creative project solving real problems with design." 
-            image="/poster.jpg"
+            title="DataLead Africa" 
+            description="Research and consulting firm providing world-class data analytics and strategic consulting services." 
+            image="/screen_1.jpg"
           />
           <ProjectCard 
             title="Project Two" 

@@ -4,17 +4,14 @@ import ProjectCard from '../components/ProjectCard'
 export default function Projects() {
   return (
     <div className="projects-page">
-      <header className="projects-header">
-        <h1>All Projects</h1>
-        <p>A collection of my work in design and development.</p>
-      </header>
-      
       <div className="projects-grid-full">
+        
         <ProjectCard 
-          title="Project One" 
-          description="A creative project solving real problems with design." 
-          image="/poster.jpg"
+          title="DataLead Africa" 
+          description="Research and consulting firm providing world-class data analytics and strategic consulting services." 
+          image="/screen_1.jpg"
         />
+
         <ProjectCard 
           title="Project Two" 
           description="Innovative solution for modern web applications." 

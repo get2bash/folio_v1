@@ -1,6 +1,6 @@
 .footer p {
   text-align: center;
-  color: #6b7280;
+  color: var(--text-secondary);
   margin: 1.25rem 0 0;
   font-size: 0.95rem;
 }
@@ -24,18 +24,17 @@
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  color: #0f172a;
-  background: rgba(15,23,42,0.04);
+  color: var(--text-color);
+  background: var(--social-bg);
   text-decoration: none;
   transition: transform 160ms ease, background 160ms ease, color 160ms ease;
 }
 
 .socials a:hover {
   transform: translateY(-3px);
-  background: rgba(99,102,241,0.12);
-  color: #4338ca;
+  background: var(--social-hover-bg);
+  color: var(--nav-hover);
 }
-
 .social-icon {
   width: 20px;
   height: 20px;
