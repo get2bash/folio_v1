@@ -91,7 +91,8 @@
 }
 
 .project-gallery {
-  margin-top: 3rem;
+  margin-top: 0;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -103,6 +104,12 @@
   border-radius: 8px;
   display: block;
   box-shadow: 0 4px 6px -1px var(--shadow-color);
+}
+
+.gallery-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 @media (max-width: 900px) {
@@ -133,5 +140,9 @@
   
   .project-info {
     gap: 1.5rem;
+  }
+
+  .gallery-row {
+    grid-template-columns: 1fr;
   }
 }

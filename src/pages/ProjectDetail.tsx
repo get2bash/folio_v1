@@ -6,7 +6,7 @@ export default function ProjectDetail() {
   const { id } = useParams()
 
   const bannerImage = id === 'datalead-africa' 
-    ? '/Free Clean desk with Dell display mockup (Mockuuups Studio).jpg'
+    ? '/datalead-africa/screen.svg'
     : '/poster.jpg'
 
   return (
@@ -32,23 +32,25 @@ export default function ProjectDetail() {
         <div className="project-description">
           <h3>About the Project</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Data-Lead Africa stands at the forefront of data consulting and training in the region. 
+            The goal of this project was to translate their complex technical expertise into an accessible, 
+            user-friendly digital experience. The new design focuses on establishing authority while ensuring 
+            intuitive navigation for businesses seeking consultancy and individuals seeking training.
           </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+        </div>
+      </div>
 
-          {id === 'datalead-africa' && (
-            <div className="project-gallery">
-              <img src="/datalead-africa/screen_2.svg" alt="DataLead Africa Screen 2" />
+      {id === 'datalead-africa' && (
+        <div className="container">
+          <div className="project-gallery">
+            <img src="/datalead-africa/screen_2.svg" alt="DataLead Africa Screen 2" />
+            <div className="gallery-row">
               <img src="/datalead-africa/screen_3.svg" alt="DataLead Africa Screen 3" />
               <img src="/datalead-africa/screen_4.svg" alt="DataLead Africa Screen 4" />
             </div>
-          )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
