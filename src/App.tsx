@@ -7,6 +7,7 @@ import Lab from './pages/Lab'
 import ProjectDetail from './pages/ProjectDetail'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [progress, setProgress] = useState<number>(1)
@@ -86,6 +87,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       {showPreloader && (
         <div className={`preloader-overlay ${fadeOut ? 'fade-out' : ''}`} aria-hidden={!showPreloader}>
           <div className="preloader-inner">

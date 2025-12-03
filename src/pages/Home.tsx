@@ -36,9 +36,9 @@ Occasionally I like to learn and write about cloud computing and AWS services as
             image="/datalead-africa/screen_1.svg"
           />
           <ProjectCard 
-            title="Project Two" 
-            description="Innovative solution for modern web applications." 
-            image="/poster.jpg"
+            title="3ter Organic Farm" 
+            description="A poultry farm specializing in the rearing and production of chickens and turkeys for fresh, high-quality meat." 
+            image="/3ter/screen_1.svg"
           />
           <ProjectCard 
             title="Project Three" 
