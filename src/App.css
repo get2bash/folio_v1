@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -1.5rem;
+  margin-top: 2rem;
   min-height: calc(100vh - 84px);
   padding: 1.25rem 1rem 2rem;
   box-sizing: border-box;
@@ -62,7 +62,7 @@
 .video-wrap {
   width: 100%;
   background: #000;
-  border-radius: 0;
+  border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
   box-shadow: 0 12px 30px rgba(2,6,23,0.12);
@@ -98,8 +98,10 @@
   margin-bottom: 2rem;
 }
 
-.featured-projects .project-card {
-  height: 50vh;
+@media (min-width: 1025px) {
+  .featured-projects .project-card {
+    height: 50vh;
+  }
 }
 
 .all-projects-btn {
@@ -123,7 +125,7 @@
 .projects-page {
   padding: 2rem 0;
   max-width: 1200px;
-  margin: 4rem auto 0;
+  margin: 2rem auto 0;
 }
 
 .projects-header {
@@ -183,7 +185,7 @@
 @media (max-width: 640px) {
   .showcase-inner { max-width: 100%; }
   .showcase h2 { font-size: 1.1rem; }
-  .hero { margin-top: -0.6rem; padding: 1rem 0.75rem 0.5rem; }
+  .hero { margin-top: 1rem; padding: 1rem 0.75rem 0.5rem; }
   .showcase { margin-top: -2.5rem; padding: 1.25rem 0 0.75rem; }
   .video-wrap { box-shadow: 0 8px 20px var(--shadow-color); }
 }
@@ -204,9 +206,10 @@
 
 /* Tablet (narrow) / large phones */
 @media (max-width: 768px) {
-  .hero { min-height: calc(100vh - 120px); padding: 1rem 1rem 1.5rem; }
+  .hero { min-height: 60vh; padding: 1rem 1rem 1.5rem; text-align: left; }
   .hero p { font-size: 1.15rem; }
   .showcase { margin-top: -3rem; padding: 1rem 0 0.75rem; }
+  .video-wrap { aspect-ratio: 16 / 10; }
   /* make content take ~95% of the viewport on narrower screens */
   .container { width: 98%; max-width: 980px; padding: 0; }
 }
@@ -214,10 +217,10 @@
 /* Small phones: tighten spacing and font sizes */
 @media (max-width: 480px) {
   #root { padding: 0.5rem 0; }
-  .hero { margin-top: -0.4rem; min-height: calc(100vh - 140px); padding: 0.75rem 0.75rem 0.5rem; }
+  .hero { margin-top: -0.4rem; min-height: 60vh; padding: 0.75rem 0.75rem 0.5rem; }
   .hero p { font-size: 1.05rem; line-height: 1.6; padding: 0 0.25rem; }
   .showcase { margin-top: -2rem; padding: 0.75rem 0 0.5rem; }
-  .video-wrap { aspect-ratio: 16 / 9; box-shadow: 0 6px 18px var(--shadow-color); }
+  .video-wrap { aspect-ratio: 16 / 10; box-shadow: 0 6px 18px var(--shadow-color); }
   
   /* Container takes 95% of screen width */
   .container { width: 95%; max-width: 100%; padding: 0; margin: 0 auto; }

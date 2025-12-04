@@ -76,3 +76,50 @@
   margin: 0;
   font-size: 1rem;
 }
+
+@media (max-width: 1024px), (hover: none) {
+  .project-card {
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-card:hover .card-media img,
+  .project-card:hover .card-media video {
+    filter: none;
+  }
+
+  .card-media {
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .card-overlay {
+    position: static;
+    background: transparent;
+    opacity: 1;
+    padding: 1rem 0 2rem 0;
+    align-items: flex-start;
+  }
+
+  .card-content {
+    transform: none;
+  }
+
+  .project-card h4 {
+    color: var(--text-color);
+    font-size: 1.25rem;
+  }
+
+  .project-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+}

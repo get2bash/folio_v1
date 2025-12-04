@@ -1,6 +1,6 @@
 .project-detail {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .project-banner {
   width: 100%;
@@ -134,12 +134,27 @@
 }
 
 @media (max-width: 768px) {
+  .project-banner {
+    height: auto;
+  }
+
+  .project-banner img {
+    height: auto;
+    object-fit: contain;
+  }
+
   .banner-overlay h1 {
     font-size: 2.5rem;
   }
   
   .project-info {
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .info-col h3 {
+    margin-bottom: 0;
   }
 
   .gallery-row {

@@ -1,6 +1,7 @@
 .photos-page {
   width: 100%;
-  padding: 20px 0 60px;
+  padding: 2rem 0 60px;
+  margin-top: 2rem;
   box-sizing: border-box;
 }
 
@@ -38,9 +39,18 @@
 @media (max-width: 600px) {
   .photos-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .photo-item {
+    margin-bottom: 0;
+  }
+
+  .photo-item img {
+    height: auto;
   }
   
   .photos-page {
-    padding-top: 20px;
+    padding: 2rem 1rem 60px;
   }
 }

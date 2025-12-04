@@ -1,21 +1,44 @@
 import './App.css'
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation, matchPath } from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Lab from './pages/Lab'
 import ProjectDetail from './pages/ProjectDetail'
+import NotFound from './pages/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import { projects } from './data/projects'
 
 function App() {
+  const location = useLocation()
+  
+  // Check if the current route is valid
+  const isValidRoute = () => {
+    // Check static routes
+    const staticRoutes = ['/', '/projects', '/lab']
+    if (staticRoutes.includes(location.pathname)) return true
+
+    // Check dynamic project routes
+    const projectMatch = matchPath('/projects/:id', location.pathname)
+    if (projectMatch && projectMatch.params.id) {
+      return Object.keys(projects).includes(projectMatch.params.id)
+    }
+
+    return false
+  }
+
+  const isKnownRoute = isValidRoute()
+
   const [progress, setProgress] = useState<number>(1)
-  const [showPreloader, setShowPreloader] = useState<boolean>(true)
+  const [showPreloader, setShowPreloader] = useState<boolean>(isKnownRoute)
   const [fadeOut, setFadeOut] = useState<boolean>(false)
-  const [appVisible, setAppVisible] = useState<boolean>(false)
+  const [appVisible, setAppVisible] = useState<boolean>(!isKnownRoute)
 
   useEffect(() => {
+    if (!isKnownRoute) return
+
     const DURATION = 5000
     let rafId: number | null = null
     let start: number | null = null
@@ -83,7 +106,20 @@ function App() {
       document.documentElement.style.overflow = ''
       window.removeEventListener('load', onLoad)
     }
-  }, [])
+  }, [isKnownRoute])
+
+  if (!isKnownRoute) {
+    return (
+      <>
+        <ScrollToTop />
+        <div className='container'>
+          <Header />
+          <NotFound />
+          <Footer />
+        </div>
+      </>
+    )
+  }
 
   return (
     <>
