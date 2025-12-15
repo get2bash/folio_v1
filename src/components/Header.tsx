@@ -35,7 +35,7 @@ export default function Header() {
       </div>
       <nav className="site-nav" aria-label="Main navigation">
         <Link to="/projects">Projects</Link>
-        <Link to="/lab">Lab</Link>
+        <a href="mailto:get2bash@gmail.com">Contact</a>
         <button 
           onClick={toggleDarkMode} 
           className="theme-toggle"

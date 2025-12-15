@@ -40,7 +40,7 @@
 .hero p {
   max-width: 65ch;
   margin: 0 auto;
-  font-size: 1.5rem;
+  font-size: clamp(0.95rem, 3.5vw, 1.6rem);
   line-height: 1.75;
   color: var(--text-color);
 }
@@ -198,6 +198,12 @@
   .video-wrap { box-shadow: 0 10px 24px var(--shadow-color); }
 }
 
+/* Tablet specific adjustments */
+@media (max-width: 850px) {
+  .hero { margin-top: 1rem; min-height: 55vh; }
+  .hero p { font-size: 1.25rem; }
+}
+
 @media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -206,8 +212,7 @@
 
 /* Tablet (narrow) / large phones */
 @media (max-width: 768px) {
-  .hero { min-height: 60vh; padding: 1rem 1rem 1.5rem; text-align: left; }
-  .hero p { font-size: 1.15rem; }
+  .hero { min-height: 50vh; padding: 1rem 1rem 1.5rem; text-align: left; margin-top: 0.5rem; }
   .showcase { margin-top: -3rem; padding: 1rem 0 0.75rem; }
   .video-wrap { aspect-ratio: 16 / 10; }
   /* make content take ~95% of the viewport on narrower screens */
@@ -217,8 +222,8 @@
 /* Small phones: tighten spacing and font sizes */
 @media (max-width: 480px) {
   #root { padding: 0.5rem 0; }
-  .hero { margin-top: -0.4rem; min-height: 60vh; padding: 0.75rem 0.75rem 0.5rem; }
-  .hero p { font-size: 1.05rem; line-height: 1.6; padding: 0 0.25rem; }
+  .hero { margin-top: -1.5rem; min-height: 50vh; padding: 0.75rem 0.75rem 0.5rem; }
+  .hero p { line-height: 1.6; padding: 0 0.25rem; }
   .showcase { margin-top: -2rem; padding: 0.75rem 0 0.5rem; }
   .video-wrap { aspect-ratio: 16 / 10; box-shadow: 0 6px 18px var(--shadow-color); }
   
@@ -227,6 +232,12 @@
   
   /* Remove side padding from featured projects on mobile so cards take full container width */
   .featured-projects { padding: 2rem 0; }
+}
+
+/* Extra small phones (iPhone SE, etc.) */
+@media (max-width: 390px) {
+  .hero { margin-top: -2rem; min-height: 45vh; }
+  .hero p { font-size: 0.95rem; }
 }
 
 /* High-density / large screens: slightly larger typography */

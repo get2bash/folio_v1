@@ -5,19 +5,15 @@
   font-weight: 400;
 
   /* Light Mode Variables */
-  --bg-color: #FFFDEC;
+  --bg-color: #cacaca;
   --text-color: #0f172a;
   --text-secondary: #64748b;
-  --card-bg: #fff;
+  --card-bg: #ffffff;
   --border-color: #e2e8f0;
   --nav-hover: #4338ca;
   --shadow-color: rgba(2,6,23,0.10);
   --social-bg: rgba(15,23,42,0.04);
   --social-hover-bg: rgba(99,102,241,0.12);
-  --skeleton-bg: #f1f1f1;
-  --skeleton-start: #f0f0f0;
-  --skeleton-mid: #e0e0e0;
-  --skeleton-end: #f0f0f0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,10 +33,6 @@
   --shadow-color: rgba(0,0,0,0.5);
   --social-bg: rgba(255,255,255,0.1);
   --social-hover-bg: rgba(129,140,248,0.2);
-  --skeleton-bg: #1e293b;
-  --skeleton-start: #1e293b;
-  --skeleton-mid: #334155;
-  --skeleton-end: #1e293b;
 }
 
 body {

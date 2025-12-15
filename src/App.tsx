@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, useLocation, matchPath } from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
-import Lab from './pages/Lab'
 import ProjectDetail from './pages/ProjectDetail'
 import NotFound from './pages/NotFound'
 import Header from './components/Header'
@@ -17,7 +16,7 @@ function App() {
   // Check if the current route is valid
   const isValidRoute = () => {
     // Check static routes
-    const staticRoutes = ['/', '/projects', '/lab']
+    const staticRoutes = ['/', '/projects']
     if (staticRoutes.includes(location.pathname)) return true
 
     // Check dynamic project routes
@@ -139,7 +138,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/lab" element={<Lab />} />
           </Routes>
           <Footer />
         </div>
