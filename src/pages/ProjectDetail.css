@@ -1,6 +1,7 @@
 .project-detail {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  padding-top: 0;
 }
 .project-banner {
   width: 100%;
@@ -110,6 +111,38 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+}
+
+.more-projects {
+  margin-top: 6rem;
+  margin-bottom: 12rem;
+}
+
+.more-projects h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.more-projects .project-card {
+  height: 50vh;
+}
+
+.more-projects .project-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .more-projects .projects-grid-full {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .more-projects .projects-grid-full > * {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 900px) {

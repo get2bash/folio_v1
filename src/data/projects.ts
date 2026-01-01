@@ -1,5 +1,6 @@
 export const projects: Record<string, {
   banner: string;
+  cardImage: string;
   role: string;
   year: string;
   client: string;
@@ -8,6 +9,7 @@ export const projects: Record<string, {
 }> = {
   'datalead-africa': {
     banner: '/datalead-africa/screen.jpg',
+    cardImage: '/datalead-africa/screen_1.svg',
     role: 'Strategy and Website Design',
     year: '2025',
     client: 'DataLead Africa',
@@ -23,6 +25,7 @@ export const projects: Record<string, {
   },
   '3ter-organic-farm': {
     banner: '/3ter/screen_2.jpg',
+    cardImage: '/3ter/screen_1.svg',
     role: 'Brand Identity and Web Design',
     year: '2025',
     client: '3ter Organic Farm',

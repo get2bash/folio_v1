@@ -4,12 +4,70 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/spacemono/v17/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-color: #fcfafa;
+        --text-color: #0f172a;
+        --body-font: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+      body {
+        margin: 0;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--body-font);
+      }
+      #root {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 2rem;
+        min-height: calc(100vh - 84px);
+        padding: 1.25rem 1rem 2rem;
+        box-sizing: border-box;
+        text-align: left;
+      }
+      .hero h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        line-height: 1.1;
+        margin: 0 0 1.5rem 0;
+        font-weight: 400;
+      }
+      .hero p {
+        max-width: 65ch;
+        margin: 0;
+        font-size: clamp(0.85rem, 3.5vw, 1.3rem);
+        line-height: 1.4;
+      }
+      @media (max-width: 480px) {
+        #root { padding: 0.5rem 0; }
+        .hero { margin-top: 4rem; margin-bottom: 4rem; min-height: auto; padding: 0 0.75rem; }
+        .hero p { line-height: 1.6; padding: 0 0.25rem; }
+      }
+    </style>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js" defer></script>
     <title>folio-v1</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main class="hero">
+        <h1>Brand & Web Designer</h1>
+        <p>Transforming brand visions into high-impact digital experiences. 
+          I focus on building functional, user-centric web designs that 
+          elevate brand identity and drive engagement.
+        </p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

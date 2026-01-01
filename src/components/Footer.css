@@ -2,7 +2,7 @@
   text-align: center;
   color: var(--text-secondary);
   margin: 1.25rem 0 0;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 }
 
 .socials-wrap {
@@ -30,6 +30,15 @@
   transition: transform 160ms ease, background 160ms ease, color 160ms ease;
 }
 
+.socials a.book-call-btn {
+  width: auto;
+  padding: 0 1rem;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 .socials a:hover {
   transform: translateY(-3px);
   background: var(--social-hover-bg);
@@ -48,6 +57,18 @@
 }
 
 @media (max-width: 480px) {
+  .socials-wrap {
+    padding: 0 1.5rem;
+  }
+
+  .socials {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
   .socials a { width: 40px; height: 40px; }
+  .socials a.book-call-btn { width: 100%; height: 48px; }
   .social-icon { width: 18px; height: 18px; }
 }

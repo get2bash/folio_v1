@@ -1,13 +1,16 @@
 
 :root {
-  font-family: "Instrument Serif", Georgia, Cambria, "Times New Roman", Times, serif;
-  line-height: 1.7;
-  font-weight: 400;
+  --body-font: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --fw-regular: 400;
+
+  font-family: var(--body-font);
+  line-height: 1.2;
+  font-weight: var(--fw-regular);
 
   /* Light Mode Variables */
-  --bg-color: #cacaca;
+  --bg-color: #fcfafa;
   --text-color: #0f172a;
-  --text-secondary: #64748b;
+  --text-secondary: #343e4c;
   --card-bg: #ffffff;
   --border-color: #e2e8f0;
   --nav-hover: #4338ca;
@@ -24,7 +27,7 @@
 }
 
 :root.dark-mode {
-  --bg-color: #0f172a;
+  --bg-color: #131313;
   --text-color: #f8fafc;
   --text-secondary: #94a3b8;
   --card-bg: #1e293b;
@@ -40,6 +43,8 @@ body {
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: var(--body-font);
+  font-weight: var(--fw-regular);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 a, button, input[type="submit"], input[type="button"] {

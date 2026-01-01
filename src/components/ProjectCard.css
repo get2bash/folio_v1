@@ -64,7 +64,7 @@
 }
 
 .project-card h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0 0 0.75rem 0;
   color: #fff;
   font-weight: 600;
@@ -115,7 +115,7 @@
 
   .project-card h4 {
     color: var(--text-color);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .project-card p {

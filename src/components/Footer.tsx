@@ -6,6 +6,10 @@ export default function Footer() {
     <footer className='footer'>
       <div className="socials-wrap">
         <div className='socials' aria-hidden={false}>
+          <a href="https://cal.com/get2bash" target="_blank" rel="noopener noreferrer" aria-label="Book a call" className="book-call-btn">
+            <span className="social-icon iconify" data-icon="mdi:phone-outline" data-inline="false" />
+            <span>Book a call</span>
+          </a>
           <a href="https://github.com/get2bash" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <span className="social-icon iconify" data-icon="mdi:github" data-inline="false" />
           </a>
@@ -20,7 +24,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <p>&copy; 2025 My folio. All rights reserved.</p>
+      <p>Built with ❤️ by Isah Bashir</p>
     </footer>
   )
 }

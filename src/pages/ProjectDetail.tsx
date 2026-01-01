@@ -1,6 +1,7 @@
 
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { projects } from '../data/projects'
+import ProjectCard from '../components/ProjectCard'
 import './ProjectDetail.css'
 
 export default function ProjectDetail() {
@@ -10,6 +11,12 @@ export default function ProjectDetail() {
   if (!project) {
     return <div className="container" style={{paddingTop: '100px'}}>Project not found</div>
   }
+
+  // Get other projects for suggestions
+  const otherProjects = Object.entries(projects)
+    .filter(([key]) => key !== id)
+    .slice(0, 2)
+    .map(([key, p]) => ({ id: key, ...p }))
 
   return (
     <div className="project-detail">
@@ -60,6 +67,20 @@ export default function ProjectDetail() {
           </div>
         </div>
       )}
+
+      <div className="container more-projects">
+        <h3>More Projects</h3>
+        <div className="projects-grid-full">
+          {otherProjects.map((p) => (
+            <ProjectCard 
+              key={p.id}
+              title={p.client}
+              description={p.description}
+              image={p.cardImage || p.banner}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
