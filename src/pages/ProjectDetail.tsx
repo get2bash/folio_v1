@@ -1,5 +1,5 @@
 
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { projects } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
 import './ProjectDetail.css'
