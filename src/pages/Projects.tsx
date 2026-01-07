@@ -15,27 +15,17 @@ export default function Projects() {
         <ProjectCard 
           title="3ter Organic Farm" 
           description="A poultry farm specializing in the rearing and production of chickens and turkeys for fresh, high-quality meat." 
-          image="/3ter/screen_1.svg"
+          image="/3ter/project_card.jpg"
         />
         <ProjectCard 
-          title="Project Three" 
-          description="Interactive experience built with WebGL and Three.js." 
-          image="/poster.jpg"
+          title="Outpost" 
+          description="Coming Soon" 
+          image="/outpost/project_card.jpg"
         />
         <ProjectCard 
-          title="Project Four" 
-          description="Cloud infrastructure design and implementation." 
-          image="/poster.jpg"
-        />
-        <ProjectCard 
-          title="Project Five" 
-          description="Mobile-first e-commerce platform design." 
-          image="/poster.jpg"
-        />
-        <ProjectCard 
-          title="Project Six" 
-          description="Data visualization dashboard for analytics." 
-          image="/poster.jpg"
+          title="Nexusflow" 
+          description="Coming Soon" 
+          image="/nexusflow/projects_card.jpg"
         />
       </div>
     </div>

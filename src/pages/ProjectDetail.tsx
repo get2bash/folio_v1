@@ -64,6 +64,9 @@ export default function ProjectDetail() {
               {project.gallery[4] && <img src={project.gallery[4]} alt="Gallery 5" />}
               {project.gallery[5] && <img src={project.gallery[5]} alt="Gallery 6" />}
             </div>
+
+            {/* Screen 8 - Full Width */}
+            {project.gallery[6] && <img src={project.gallery[6]} alt="Gallery 7" />}
           </div>
         </div>
       )}

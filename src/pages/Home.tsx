@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <>
       <main className='hero'>
-        <h1>Brand & Web Designer</h1>
+        <h1>Brand & Product Designer</h1>
         <p>Transforming brand visions into high-impact digital experiences. 
           I focus on building functional, user-centric web designs that 
           elevate brand identity and drive engagement.
@@ -82,17 +82,17 @@ export default function Home() {
           <ProjectCard 
             title="3ter Organic Farm" 
             description="A poultry farm specializing in the rearing and production of chickens and turkeys for fresh, high-quality meat." 
-            image="/3ter/screen_1.svg"
+            image="/3ter/project_card.jpg"
           />
           <ProjectCard 
-            title="Project Three" 
-            description="Interactive experience built with WebGL and Three.js." 
-            image="/poster.jpg"
+            title="Outpost" 
+            description="Coming Soon" 
+            image="/outpost/project_card.jpg"
           />
           <ProjectCard 
-            title="Project Four" 
-            description="Cloud infrastructure design and implementation." 
-            image="/poster.jpg"
+            title="Nexusflow" 
+            description="Coming Soon" 
+            image="/nexusflow/project_card.jpg"
           />
         </div>
         <Link to="/projects" className="all-projects-btn">All projects</Link>
