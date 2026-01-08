@@ -8,20 +8,25 @@ export const projects: Record<string, {
   gallery?: string[];
 }> = {
   'datalead-africa': {
-    banner: '/datalead-africa/screen.jpg',
-    cardImage: '/datalead-africa/screen_1.svg',
+    banner: '/datalead-africa/banner.jpg',
+    cardImage: '/datalead-africa/banner.jpg',
     role: 'Strategy and Website Design',
     year: '2025',
     client: 'DataLead Africa',
-    description: 'Research and consulting firm providing world-class data analytics and strategic consulting services.',
+    description: 'Research and consulting firm providing world-class data analytics and strategic consulting services. The primary objective was to consolidate three distinct business pillars Consultancy, Research and Training into a single, cohesive user journey. The site needed to serve as both a repository for high-impact research publications and a conversion-optimized launchpad for the firm’s bootcamps and training programs.',
     gallery: [
-      '/datalead-africa/screen_2.svg',
-      '/datalead-africa/screen_1.svg',
-      '/datalead-africa/screen_3.svg',
-      '/datalead-africa/screen_4.svg',
-      '/datalead-africa/screen_5.svg',
-      '/datalead-africa/screen_7.svg',
-      '/datalead-africa/screen_6.svg'
+      '/datalead-africa/screen_1.jpg',
+      '/datalead-africa/screen_2.jpg',
+      '/datalead-africa/screen_3.jpg',
+      '/datalead-africa/screen_4.jpg',
+      '/datalead-africa/screen_5.jpg',
+      '/datalead-africa/screen_6.jpg',
+      '/datalead-africa/screen_7.jpg',
+      '/datalead-africa/screen_8.jpg',
+      '/datalead-africa/screen_9.jpg',
+      '/datalead-africa/screen_10.jpg',
+      '/datalead-africa/screen_11.jpg',
+      '/datalead-africa/screen_12.jpg'
     ]
   },
   '3ter-organic-farm': {
@@ -30,7 +35,7 @@ export const projects: Record<string, {
     role: 'Brand Identity Design',
     year: '2025',
     client: '3ter Organic Farm',
-    description: 'A poultry farm specializing in the rearing and production of chickens and turkeys for fresh, high-quality meat.',
+    description: '3ters Organic Farm is a modern poultry business dedicated to ethical farming and sustainability. Specializing in the rearing of both chickens and turkeys, they provide fresh, premium-quality meat to health-conscious households, local markets, and restaurants. They needed to step away from the industry standard of "cartoonish" or overly rustic farm logos. The goal was to design a visual identity that communicated freshness, trust, and vitality while remaining professional enough for commercial packaging and corporate signage.',
     gallery: [
       '/3ter/screen_2.jpg',
       '/3ter/screen_1.jpg',

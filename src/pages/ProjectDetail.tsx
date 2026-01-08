@@ -67,6 +67,21 @@ export default function ProjectDetail() {
 
             {/* Screen 8 - Full Width */}
             {project.gallery[6] && <img src={project.gallery[6]} alt="Gallery 7" />}
+
+            {/* Screen 9 & 10 - Side by Side */}
+            <div className="gallery-row">
+              {project.gallery[7] && <img src={project.gallery[7]} alt="Gallery 8" />}
+              {project.gallery[8] && <img src={project.gallery[8]} alt="Gallery 9" />}
+            </div>
+
+            {/* Screen 11 - Full Width */}
+            {project.gallery[9] && <img src={project.gallery[9]} alt="Gallery 10" />}
+
+            {/* Screen 12 & 13 - Side by Side */}
+            <div className="gallery-row">
+              {project.gallery[10] && <img src={project.gallery[10]} alt="Gallery 11" />}
+              {project.gallery[11] && <img src={project.gallery[11]} alt="Gallery 12" />}
+            </div>
           </div>
         </div>
       )}
