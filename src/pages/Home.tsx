@@ -8,13 +8,19 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!videoRef.current || !containerRef.current) return
+    let ticking = false;
+
+    const update = () => {
+      if (!videoRef.current || !containerRef.current) {
+        ticking = false;
+        return
+      }
 
       // Disable transition on mobile and let CSS handle full width
       if (window.innerWidth <= 768) {
         videoRef.current.style.transform = ''
         videoRef.current.style.borderRadius = ''
+        ticking = false;
         return
       }
 
@@ -31,6 +37,14 @@ export default function Home() {
       
       videoRef.current.style.transform = `scale(${scale})`
       videoRef.current.style.borderRadius = `${8 * (1 - progress)}px`
+      ticking = false;
+    }
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(update)
+        ticking = true
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -57,16 +71,11 @@ export default function Home() {
       <section className="showcase" aria-labelledby="showcase-heading">
         <div className="showcase-inner" ref={containerRef}>
           <div className="video-wrap" ref={videoRef} style={{ willChange: 'transform' }}>
-            <video
+            <img
               className="showcase-video"
-              src="/demo.mp4"
-              poster="/poster.jpg"
-              controls
-              playsInline
-              preload="metadata"
-            >
-              Your browser does not support the video tag. You can view the video <a href="/demo.mp4">here</a>.
-            </video>
+              src="/showcase.gif"
+              alt="Showcase of work"
+            />
           </div>
         </div>
       </section>

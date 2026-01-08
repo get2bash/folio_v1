@@ -350,8 +350,11 @@
   .video-wrap { 
     aspect-ratio: 16 / 10; 
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     border-radius: 0;
   }
   /* make content take ~95% of the viewport on narrower screens */
@@ -390,7 +393,23 @@
     margin-bottom: 6rem;
     padding: 0; 
   }
-  .video-wrap { height: 60vh; aspect-ratio: auto; box-shadow: 0 6px 18px var(--shadow-color); }
+  .video-wrap { 
+    width: 100vw;
+    height: auto;
+    aspect-ratio: auto;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0;
+    box-shadow: none; /* Often cleaner on full-width mobile */
+  }
+
+  .showcase-video {
+    height: auto;
+    object-fit: contain;
+  }
   
   /* Featured Projects Section */
   .featured-projects { 
