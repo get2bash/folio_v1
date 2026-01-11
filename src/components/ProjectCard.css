@@ -96,9 +96,15 @@
   }
 
   .card-media {
-    height: 300px;
+    height: auto;
     border-radius: 12px;
     overflow: hidden;
+  }
+  
+  .card-media img,
+  .card-media video {
+    height: auto;
+    object-fit: contain;
   }
 
   .card-overlay {

@@ -177,6 +177,11 @@
     object-fit: contain;
   }
 
+  .project-gallery img {
+    height: auto;
+    object-fit: contain;
+  }
+
   .banner-overlay h1 {
     font-size: 2.5rem;
   }
